@@ -3,6 +3,7 @@ package com.company;
 import java.io.IOException;
 import java.util.List;
 
+import static com.company.Controller.sortNachAnzahlMitarbeiter;
 import static com.company.Repository.lesenKundenAusDatei;
 import static com.company.Repository.schreibenInDatei;
 
@@ -14,7 +15,7 @@ public class Main {
             kunden=lesenKundenAusDatei("src/com/company/kundendaten.txt");
             kunden.forEach(System.out::println);
 
-            schreibenInDatei(kunden, "src/com/company/kundendatenumges.txt");
+            sortNachAnzahlMitarbeiter(kunden);
 
 
 
