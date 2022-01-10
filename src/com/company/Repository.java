@@ -1,8 +1,6 @@
 package com.company;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -59,6 +57,28 @@ public class Repository {
             geleseneKunden.add(geleseneKunde);
         }
         return geleseneKunden;
+    }
+
+    public static void schreibenInDatei(List<Kunde> kundeZuSchreiben, String dateiname){
+        try {
+            File myObj = new File(dateiname);
+
+            if (myObj.createNewFile()) {
+                System.out.println("File created: " + myObj.getName());
+
+                FileWriter myWriter = new FileWriter(dateiname);
+                for(Kunde kunde : kundeZuSchreiben){
+                    myWriter.write(kunde.getId() + "," + kunde.getUnternehmensname() + ","
+                            + kunde.getUnternehmensgröße().getLabel() + "," + kunde.getAnzahlMitarbeiter() + "," + kunde.getEinkommenKunde() + ","+kunde.getOrt() +"\n");
+                }
+                myWriter.close();
+            } else {
+                System.out.println("File already exists.");
+            }
+        } catch (IOException e) {
+            System.out.println("An error occurred while using the files");
+            e.printStackTrace();
+        }
     }
 
 }
