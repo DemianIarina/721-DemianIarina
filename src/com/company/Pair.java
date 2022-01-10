@@ -1,5 +1,8 @@
 package com.company;
 
+/**
+ * Eine Struktur die die Name eines Ortes und das Einkummen von dieses ort speichert
+ */
 public class Pair {
     private String ort;
     private int einkommen;

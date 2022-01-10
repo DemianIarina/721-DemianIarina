@@ -1,5 +1,8 @@
 package com.company;
 
+/**
+ * Ein Kunde der ein id, ein name, eine grosse, ein anzahl von mitarbeiter, ein einkomme von Kunden, und ein ort hat
+ */
 public class Kunde {
     private int id;
     private String unternehmensname;

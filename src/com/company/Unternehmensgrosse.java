@@ -1,5 +1,8 @@
 package com.company;
 
+/**
+ * Ein Enum der die groose der unternehmen representiert
+ */
 public enum Unternehmensgrosse {
     SMALL("Small"),
     MEDIUM("Medium"),

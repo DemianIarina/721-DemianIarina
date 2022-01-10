@@ -24,7 +24,7 @@ public class Main {
 
 
         } catch (IOException e) {
-            System.out.println("Error occured while working with file");
+            System.out.println("Error passiert wahren man arbeitetet mit die Datei");
         }
     }
 }
